@@ -49,6 +49,7 @@ function exerciseDog(dogName, dogBreed){
     routine.forEach(action => {
     var meow = action(dogName,dogBreed)
     returnedArray.push(meow)
+    console.log(returnedArray)
     } 
 )
 return returnedArray

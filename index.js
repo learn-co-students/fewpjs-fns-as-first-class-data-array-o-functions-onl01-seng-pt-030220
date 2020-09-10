@@ -24,7 +24,7 @@ function unleashDog(dogName, dogBreed){
 }
 
 
-let routine = [
+const routine = [
   wakeDog,
   leashDog,
   walkToPark,
@@ -35,11 +35,16 @@ let routine = [
 
 
 function exerciseDog(dogName, dogBreed){
-  let newArr = [];
+  // let newArr = [];
 
-  for(let i = 0; i < routine.length; i++){
-    newArr.push(routine[i](dogName, dogBreed))
-  };
+  // for(let i = 0; i < routine.length; i++){
+  //   newArr.push(routine[i](dogName, dogBreed))
+  // };
+  return routine.map(fn => fn(dogName, dogBreed))
 
-  return newArr;
+  // return newArr;
 };
+
+// function exerciseDog(dog, breed) {
+//   return routine.map(fn => fn(dog, breed))
+// }
